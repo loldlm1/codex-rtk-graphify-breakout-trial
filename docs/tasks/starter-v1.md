@@ -10,7 +10,7 @@ A public, agent-built modular Canvas game provides an immutable playable starter
 - [ ] Provide an ordinary small modular playable Breakout starter, with separately indexable source and meaningful timing/state/browser seams; do not solve the measured pause/resume/restart task during preparation.
 - [ ] Preserve a fixed starter commit/tag, dependency lockfiles, real validation commands, and actual initial results.
 - [ ] Freeze acceptance for paused simulation, safe resume timing, reset state, input cleanup, absence of duplicate loops, preserved gameplay, and visual/interaction quality before measured runs.
-- [ ] Document the code-only Graphify coverage boundary for HTML/inline JavaScript without altering only one measured arm to favor the tool.
+- [ ] Document the code-only source-coverage boundary for HTML/inline JavaScript and keep the application architecture consistent across independent implementations.
 - [ ] Document purpose, accurate agentic provenance, reproducible use, and evidence limitations while preserving private session/machine material.
 - [ ] Retain the reusable starter and evidence convention; do not merge a measured solution into it or create a final merge/release/deployment.
 
