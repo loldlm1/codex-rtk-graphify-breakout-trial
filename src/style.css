@@ -1,0 +1,60 @@
+:root { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #242b40; background: #f5f3ed; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.arcade { width: min(100% - 64px, 920px); margin: auto; }
+.masthead { display: flex; justify-content: space-between; align-items: center; padding: 30px 0 25px; border-bottom: 1px solid #d8d7cf; }
+.brand { display: grid; grid-template-columns: 33px auto; color: inherit; text-decoration: none; font-weight: 850; font-size: 15px; letter-spacing: .13em; line-height: 1.35; }
+.brand-mark { grid-row: span 2; font-size: 28px; color: #6354ba; align-self: center; }
+.brand-sub { font-size: 8px; letter-spacing: .22em; color: #626779; }
+.edition, .eyebrow, footer, .stat-label, .arena-top { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; letter-spacing: .12em; }
+.edition { color: #616576; }
+.edition span { margin: 0 9px; color: #aaa9ae; }
+.intro { margin: 32px 0 28px; }
+.eyebrow { color: #6958a9; font-weight: 700; margin-bottom: 9px; }
+h1 { font-size: clamp(29px, 4vw, 42px); font-weight: 750; letter-spacing: -.055em; line-height: 1.15; margin: 0; }
+h1 span { color: #8b71cf; }
+.intro > p:last-child { color: #606575; font-size: 14px; margin: 12px 0 0; }
+.game { border: 1px solid #d7d7d3; border-radius: 12px; background: #fffefa; padding: 0 16px; box-shadow: 0 8px 26px #272c3c08; overflow: hidden; }
+.dashboard { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 20px 15px 17px; }
+.dashboard > div { padding-left: 26px; border-left: 1px solid #deded8; }
+.dashboard > div:first-child { padding-left: 0; border: 0; }
+.stat-label { display: block; color: #646a79; font-size: 9px; margin-bottom: 5px; }
+output { font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 700; letter-spacing: -.04em; }
+.life-dot { font-size: 12px; color: #c96866; margin-left: 6px; vertical-align: 3px; }
+.arena { background: #181e32; border: 1px solid #30374b; border-radius: 6px; overflow: hidden; }
+.arena-top { display: flex; justify-content: space-between; padding: 13px 20px; color: #bbc1d6; font-size: 9px; border-bottom: 1px solid #33394d; }
+.live-label { color: #a7decf; font-size: 8px; }
+canvas { width: 100%; display: block; aspect-ratio: 720 / 520; touch-action: none; cursor: crosshair; }
+canvas:focus-visible, a:focus-visible { outline: 3px solid #8466cf; outline-offset: 3px; }
+#status { min-height: 19px; font-size: 12px; text-align: center; color: #616777; margin: 12px 0; }
+.controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 26px 0 25px; }
+.controls > div { display: flex; gap: 11px; align-items: flex-start; }
+.control-icon { border: 1px solid #d6d5d3; width: 29px; height: 29px; flex-shrink: 0; display: grid; place-items: center; border-radius: 7px; color: #6a5b98; font-size: 21px; }
+.controls p { margin: 0; font-size: 11px; color: #656a77; }
+.controls strong { display: block; color: #373d50; font-size: 12px; font-weight: 650; margin: 1px 0 6px; }
+.controls p > span { display: block; line-height: 1.7; }
+kbd { border: 1px solid #d6d5d1; border-bottom-width: 2px; border-radius: 3px; padding: 1px 4px; font: 9px ui-monospace, monospace; background: #fffefa; }
+footer { display: flex; justify-content: space-between; padding: 19px 0 25px; border-top: 1px solid #d8d7cf; color: #6f7280; font-size: 9px; }
+footer span:last-child { font-family: inherit; letter-spacing: 0; }
+@media (min-width: 1000px) { .game { max-width: 810px; margin: auto; } .intro { margin-top: 31px; } }
+@media (max-width: 620px) {
+  .arcade { width: calc(100% - 28px); }
+  .masthead { padding: 21px 0; }
+  .edition { font-size: 8px; letter-spacing: .05em; }
+  .edition span { margin: 0 3px; }
+  .brand { font-size: 12px; grid-template-columns: 28px auto; }
+  .brand-sub { font-size: 7px; }
+  .intro { margin: 26px 0 23px; }
+  .intro > p:last-child { font-size: 12px; }
+  .eyebrow { font-size: 8px; }
+  .game { padding: 0 8px; }
+  .dashboard { padding: 15px 6px; }
+  .dashboard > div { padding-left: 16px; }
+  .stat-label { font-size: 8px; }
+  output { font-size: 22px; }
+  .arena-top { padding: 10px 12px; font-size: 7px; }
+  .live-label { font-size: 7px; }
+  .controls { grid-template-columns: 1fr; gap: 17px; padding: 22px 2px; }
+  .controls strong { margin-bottom: 3px; }
+  footer { font-size: 7px; gap: 10px; letter-spacing: .04em; }
+}

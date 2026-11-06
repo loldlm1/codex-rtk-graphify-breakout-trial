@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181e32" />
+    <title>Breakwater — a little arcade escape</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <main class="arcade">
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="Breakwater home"><span class="brand-mark" aria-hidden="true">▦</span> BREAKWATER<span class="brand-sub">THE LITTLE ARCADE</span></a>
+        <span class="edition">NO. 001 <span aria-hidden="true">/</span> BREAKOUT</span>
+      </header>
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow">A SMALL BREAK. A CLEAN SLATE.</p>
+        <h1 id="title">Make a little space<span>.</span></h1>
+        <p>Forty bricks. Three chances. One clean sweep.</p>
+      </section>
+      <section class="game" aria-label="Breakout game">
+        <div class="dashboard">
+          <div><span class="stat-label">SCORE</span><output id="score" aria-label="Score">000</output></div>
+          <div><span class="stat-label">BRICKS LEFT</span><output id="remaining" aria-label="Bricks left">40</output></div>
+          <div><span class="stat-label">LIVES</span><output id="lives" aria-label="Lives">3</output><span class="life-dot" aria-hidden="true"> ●</span></div>
+        </div>
+        <div class="arena">
+          <div class="arena-top"><span>01 / THE FIRST WAVE</span><span class="live-label">● IN PLAY</span></div>
+          <canvas width="720" height="520" tabindex="0" aria-label="Breakout arena" aria-describedby="controls status">Move the paddle with the left and right arrows or A and D. Keep the ball in play to clear the bricks.</canvas>
+        </div>
+        <p id="status" role="status" aria-label="Round status" aria-live="polite" aria-atomic="true">Keep the ball in play. Clear the wave.</p>
+      </section>
+      <section id="controls" class="controls" aria-label="How to play">
+        <div><span class="control-icon" aria-hidden="true">↔</span><p><strong>Find your rhythm</strong><span><kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> to move</span></p></div>
+        <div><span class="control-icon" aria-hidden="true">⌁</span><p><strong>Or go with the flow</strong><span>Move your pointer or drag to steer</span></p></div>
+        <div><span class="control-icon" aria-hidden="true">↗</span><p><strong>Work the angles</strong><span>The paddle edges shape your shot</span></p></div>
+      </section>
+      <footer><span>LESS SCROLL. MORE PLAY.</span><span>Made for a moment of focus.</span></footer>
+    </main>
+  </body>
+</html>
