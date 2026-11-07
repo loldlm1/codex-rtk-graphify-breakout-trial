@@ -7,11 +7,11 @@
 | Authorization | Scoped local task commits/integration authorized. Outer coordinator owns GitHub publication. No final merge/release/deployment, auth/trust/config changes or extra trial. |
 | Review baseline | Original public baseline 223ce7462ebbb7cda1961e62f2860a2c3f0dcc65; exact immutable feature review point/starter a4031c0da42d95f97d3b2e0fed4bdbcd76dd3087. |
 | Working pointers | Integration trial/canvas-a; worker task/canvas-a-feature at the precreated isolated implementation worktree (same arm dependencies). Initial integration/worker tip 623522345ddcf41dc7a9c3ddb3ff15c021dad6ce; implementation started from synchronized tip 362f361d4fa8811cd631f947538d2a8cd75bb10e. One record: docs/work/arm-v1.md. |
-| Phase | Implementation locally verified; root integration, direct browser inspection and separate Standards/Spec reviews pending. Root coordinates integration; outer coordinator owns publication. |
+| Phase | Implementation 4bdeaa76d59f8850bd9e3e29eecaa5416f76c621 fast-forward integrated; root frozen gates verified; direct inspection and separate Standards/Spec reviews pending. Root coordinates integration; outer coordinator owns publication. |
 | Integration and validation evidence | Fresh arm-owned npm ci: 136 packages; worker symlink resolves only to this arm. Node 24.6.0/npm 11.5.1/Python 3.12.8/Chrome 155.0.8059.39. ECC-only RED/GREEN/refactor evidence below; npm run verify and npm run test:feature pass locally. Frozen tests/scripts/configs/80% all-source thresholds retained. |
-| Blockers | No implementation blocker. Required root inspection, screenshots and independent reviews remain pending; worker checks alone do not establish readiness or final acceptance. |
+| Blockers | No implementation/check blocker. Direct inspection/screenshots and independent Standards/Spec review remain required; final acceptance and accounting closure are not claimed. |
 | Amendment | None. |
-| Next action | Root integrates the scoped task commit, inspects desktop/mobile behavior and conducts the separate Standards/Spec reviews. |
+| Next action | Inspect desktop/mobile behavior while the fresh Standards axis reviews the integrated root, then run the separate fresh Spec axis. |
 
 Implementation evidence (worker; local checks, not final acceptance):
 
@@ -29,5 +29,11 @@ Measurement and tool identity (private canonical sources remain outside Git):
 - Arm window starts 2026-11-07T00:58:18.818Z; model starts 00:58:24.142Z. Outer driver reports preparation 3.084 seconds. End/elapsed remain pending; this is an active root turn.
 - Scope/thread boundary: this root and only its ticket implementation, separate Standards/Spec reviews and required fixes. Native source closure, exact usage and publication belong to the outer coordinator; no savings/adoption claim.
 - Actual native config/driver: gpt-6.1-sol, root ultra/default, concurrency 2. Workers must spawn with fresh fork_turns none and explicit xhigh on the same model. Native usage/context metadata will be projected at verification; no guessed limits.
-- Arm A has no RTK activation/policy or Graphify server/graph. Browser transport is installed chrome-devtools-mcp 1.10.1 via owned npm cache, isolated/headless/system Chrome, no usage statistics or performance CrUX; activation duration pending first call. Native trust/config remain untouched.
+- Arm A has no RTK activation/policy or Graphify server/graph. Browser transport is installed chrome-devtools-mcp 1.10.1 via owned npm cache, isolated/headless/system Chrome, no usage statistics or performance CrUX; first list_pages call observed 497 ms (01:00:17.519Z); complete native transport startup duration is not separately surfaced. Native trust/config remain untouched.
 - Common supplied measurement v1 and quality supplement apply unchanged. Required checks: npm run verify; npm run test:feature; desktop 1280×1000/mobile 390×844 direct interaction and screenshots. Lint unconfigured. Separate Matt Standards and Spec review use exact feature fixed point above, sequentially within native capacity.
+
+Integration verification boundary:
+
+- Root fast-forward integrated feature commit `4bdeaa76d59f8850bd9e3e29eecaa5416f76c621`. `npm run verify` PASS on integration: types/build, 30 unit tests, 5 Chrome journeys. `npm run test:feature` PASS: 9 frozen unit cases, 3 frozen browser journeys. Coverage independently reproduced all six TS files: 223/224 statements 99.55%, 84/87 branches 96.55%, 30/30 functions 100%, 187/187 lines 100%. Same three small coverage gaps as worker evidence.
+- SHA-256 comparison confirms contract, all frozen feature tests, package scripts/lock and check/type configurations unchanged. `git diff --check` PASS. Proportional source security scan and review found no new secret, dynamic-code, unsafe-HTML or network/data surface. Lint remains unconfigured.
+- Private raw logs, all-source coverage and both browser artifact sets are preserved under arm runtime evidence/integration; desktop/mobile direct artifacts and separate review evidence follow. Deployment/target acceptance not applicable to this local feature task; outer publication/measurement closure remain separate.
