@@ -7,17 +7,17 @@
 | Authorization | Scoped local task commits/integration authorized. Outer coordinator owns GitHub publication. No final merge/release/deployment, auth/trust/config changes or extra trial. |
 | Review baseline | Original public baseline 223ce7462ebbb7cda1961e62f2860a2c3f0dcc65; exact immutable feature review point/starter a4031c0da42d95f97d3b2e0fed4bdbcd76dd3087. |
 | Working pointers | Integration trial/canvas-b fast-forward integrated feature a26cc6bc83dd71607998f85f4361b225300e429e from task/canvas-b-feature. The precreated worker is retained for scoped fixes. Originating issue https://github.com/loldlm1/.codex/issues/26; full local contract docs/tasks/pause-resume-restart-v1.md. No arm-owned PR/publication. |
-| Phase | Integrated verification passed; direct interaction and independent review underway. |
-| Integration and validation evidence | Clean integration/worker launch tips match. Node24.6.0/npm11.5.1/Python3.12.8/Chrome155.0.8059.39/native0.167.0 verified. Arm-owned fresh dependencies and same-arm worker symlink verified; lock SHA256 f0f8a2dbd3e93d48e2a31082a1bac14107ecf856111756032c98bf0d6f8cd61f unchanged. RTK1.1.0 binary digest matches frozen policy; actual config succeeds with sqlite recall, full awareness and disabled telemetry; environment blocks telemetry. Native root context reports gpt-6.1-sol/ultra; configured default tier and concurrency2. Worker behavior RED/GREEN and local verification complete below; integrated interaction evidence and separate fresh review axes pending. |
-| Blockers | No implementation blocker. Coordinator mobile interaction and separate independent review axes remain required before local handoff. |
+| Phase | Local implementation, integrated verification, direct inspection and both independent review axes complete; handoff to outer coordinator. |
+| Integration and validation evidence | Feature a26cc6b integrated; actual unchanged root verify, test:feature and unit commands pass. All-source coverage, direct desktop/mobile evidence, separate Standards0/Spec0 and runtime/tool identity details below. No feature fix was required after review. |
+| Blockers | No local feature blocker. Outer coordinator owns canonical source closure, usage allocation, independent comparison and publication; the active root does not claim closed accounting or external acceptance. |
 | Amendment | None. |
-| Next action | Complete mobile interaction and the separate fresh Standards/Spec review axes against the immutable feature fixed point. |
+| Next action | Outer coordinator freezes the completed root/descendant sources and screenshot/check evidence, reconciles usage under the fixed policy, then performs its separate assessment/publication. |
 
 Measurement boundary: arm preparation starts 2026-11-07T00:34:47.485Z; native root
 session starts 2026-11-07T00:34:56.551Z. The outer coordinator retains canonical
 sources, lineage, phase allocation and closure; this active root does not claim a
 closed run. Native context-limit metadata reports 475000 tokens; peak reported
-input/utilization and final elapsed remain to be captured. RTK output estimates
+input/utilization and elapsed snapshots are recorded below. RTK output estimates
 are separate from complete-workflow usage. No comparison, savings or adoption is
 asserted. Graphs use fresh code-only/no-dedup/backend-none extraction and separate
 exact-worktree servers; rebuild after every source/record/Git identity change
@@ -72,3 +72,61 @@ worker context confirms gpt-6.1-sol/xhigh; root stays ultra/default, native cap2
 Preparation receipt reports RTK activation 3.428s and initial indexing 1.978s;
 the coordinator's first post-record root rebuild took 1.013s and its actual
 exact-root source answer located scheduling/disposal and input/state seams.
+
+Final local evidence boundary: 2026-11-07T00:50:15.663034Z, 928.178034s after arm
+preparation start. This is an implementation/review/verification boundary, not
+the still-active root turn's end; final delivery/source tails remain in the outer
+coordinator's accounting. Separate fresh fork-none/xhigh Standards and Spec
+workers reviewed exact 2f9a18896b68683e015bc014b853509403760d96 against the unchanged
+feature fixed point: zero findings on each axis. The native cap2 required these
+axes to run sequentially. Both used the exact-root graph; direct source confirmed
+pause/restart/disposal share input clearing/cancellation and restart uses the fresh
+state reference. The post-integration root rebuild took 1.042s. Worker postcommit
+rebuild succeeded, but its exact extraction duration was not separately measured.
+Final documentation synchronization receives direct Git/privacy validation; source
+and check configuration are unchanged since the passing integrated gates.
+
+Direct 390×844 mobile/touch-emulated inspection confirmed unchanged paused pixels,
+resume, repeated Restart, terminal feedback, disabled terminal Pause, keyboard
+Tab/Enter recovery and retained Restart focus. Buttons measure 168×44 CSS pixels,
+with no horizontal overflow. Automated integrated Chrome journeys independently
+verify actual keyboard, pointer/touch steering and rendering. Direct free-running
+drag did not yield a separate displacement measurement before terminal state;
+no such measurement is claimed. No direct console warnings/errors were observed.
+Actual inspected PNG artifacts are desktop-paused-direct.png,
+mobile-paused-direct.png and mobile-terminal-direct.png in arm-owned private
+evidence, alongside root/worker checks, coverage and review reports. Browser
+transport denied explicit screenshot paths; returned PNG blocks were saved without
+modification. Targeted security/diff checks passed; raw npm audit reported zero
+vulnerabilities. Only Chrome/Linux and emulated mobile are established.
+
+Local frozen rubric observations (each independent, no total):
+
+| Local axis | Score | Observation |
+| --- | --- | --- |
+| Correctness and scope | 2 | All fixed acceptance passes; only selected commands/feedback and focused tests added. |
+| Maintainability | 2 | Existing ordinary modules/public seams; shared lifecycle cleanup and meaningful boundary tests. |
+| Visual clarity | 2 | State, HUD, controls and terminal instructions clear at both fixed sizes. |
+| Interaction | 2 | Native Enter/focus, visible outline, reachable 44px controls and terminal follow-up verified. |
+| Gameplay and regressions | 2 | Frozen collision/scoring/lives/render/keyboard/touch and terminal recovery gates pass. |
+
+| Separate quality attribute | Score | Observation |
+| --- | --- | --- |
+| Correctness | 2 | Freeze/reset/timing/single-chain acceptance passes, including terminal models and 30 restarts. |
+| Scope | 2 | No unrelated gameplay, dependencies, framework, storage or service changes. |
+| Maintainability | 2 | Small controller/view/wiring changes preserve stack and public test boundaries. |
+| Visual clarity | 2 | Desktop/mobile screenshots inspected; pause/terminal states readable, no clipping. |
+| Interaction | 2 | Keyboard/native controls, focus retention, touch steering and follow-up actions pass. |
+| Regressions | 2 | Starter checks unchanged and passing; all six application TS modules measured. |
+
+These are arm-local observations; independent paired assessment remains separate.
+At the native snapshot above, peak reported request input was root158281,
+implementation110064, Standards69159 and Spec78408 tokens; every thread reports
+context limit475000. Native utilization percentage is unavailable, so none is
+inferred from request input. All three workers have actual completion markers;
+no observed compaction occurred. Root final-response tails are explicitly open.
+RTK's separate 21-command snapshot estimates raw command output11056 tokens and
+filtered output10775 tokens across root/worker workdirs; these are not native or
+complete-workflow usage. An unsupported `rtk gain --json` diagnostic returned2;
+the read-only arm tracking database supplied those estimates instead. No RTK
+bypass was used. All retries and this handoff remain part of native source usage.
