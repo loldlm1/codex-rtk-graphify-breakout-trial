@@ -6,12 +6,12 @@
 | Approved decisions | Frozen common measurement/quality contract; same starter/checks/thresholds; Matt coordination and separate fresh Standards/Spec review; ECC-only implementation cycle. |
 | Authorization | Scoped local task commits/integration authorized. Outer coordinator owns GitHub publication. No final merge/release/deployment, auth/trust/config changes or extra trial. |
 | Review baseline | Original public baseline 223ce7462ebbb7cda1961e62f2860a2c3f0dcc65; exact immutable feature review point/starter a4031c0da42d95f97d3b2e0fed4bdbcd76dd3087. |
-| Working pointers | Integration trial/canvas-b synchronized at 0eb75a908370d18e6a2348768ecbf423d106a615; worker task/canvas-b-feature in the arm-owned precreated implementation worktree. The scoped implementation commit accompanies this record. Originating issue https://github.com/loldlm1/.codex/issues/26; full local contract docs/tasks/pause-resume-restart-v1.md. No arm-owned PR/publication. |
-| Phase | Worker implementation locally verified; integration, direct interaction review and independent Standards/Spec review pending. |
+| Working pointers | Integration trial/canvas-b fast-forward integrated feature a26cc6bc83dd71607998f85f4361b225300e429e from task/canvas-b-feature. The precreated worker is retained for scoped fixes. Originating issue https://github.com/loldlm1/.codex/issues/26; full local contract docs/tasks/pause-resume-restart-v1.md. No arm-owned PR/publication. |
+| Phase | Integrated verification passed; direct interaction and independent review underway. |
 | Integration and validation evidence | Clean integration/worker launch tips match. Node24.6.0/npm11.5.1/Python3.12.8/Chrome155.0.8059.39/native0.167.0 verified. Arm-owned fresh dependencies and same-arm worker symlink verified; lock SHA256 f0f8a2dbd3e93d48e2a31082a1bac14107ecf856111756032c98bf0d6f8cd61f unchanged. RTK1.1.0 binary digest matches frozen policy; actual config succeeds with sqlite recall, full awareness and disabled telemetry; environment blocks telemetry. Native root context reports gpt-6.1-sol/ultra; configured default tier and concurrency2. Worker behavior RED/GREEN and local verification complete below; integrated interaction evidence and separate fresh review axes pending. |
-| Blockers | No implementation blocker. Integrated verification, coordinator desktop/mobile interaction and independent review remain required before acceptance. |
+| Blockers | No implementation blocker. Coordinator mobile interaction and separate independent review axes remain required before local handoff. |
 | Amendment | None. |
-| Next action | Coordinator integrates the worker implementation, verifies the integrated revision, performs desktop/mobile interaction checks and commissions the separate Standards/Spec review. |
+| Next action | Complete mobile interaction and the separate fresh Standards/Spec review axes against the immutable feature fixed point. |
 
 Measurement boundary: arm preparation starts 2026-11-07T00:34:47.485Z; native root
 session starts 2026-11-07T00:34:56.551Z. The outer coordinator retains canonical
@@ -54,3 +54,21 @@ separately exercises repeated commands and terminal no-ops. Desktop/mobile pause
 screenshots and all private reports stay outside Git; worker inspected these
 captures, while final direct interaction and independent review belong to the
 coordinator. Local verification is not merged completion or external acceptance.
+
+Coordinator integration/verification boundary: feature a26cc6b is reachable from
+trial/canvas-b. Actual unchanged `rtk npm run verify` passed: strict types, build,
+23/23 units with the same all-source coverage above, and 5/5 Chrome browser
+journeys. Actual unchanged `rtk npm run test:feature` passed 9/9 controller and
+3/3 browser checks; separate `rtk npm test` passed 23/23. No failures/skips/retries;
+lint remains unconfigured. Direct desktop inspection at 1280×1000 confirmed
+native Enter pause, retained Resume focus with a 3px outline, no horizontal
+overflow, 88×44 buttons, and identical paused Canvas pixels after movement input
+and elapsed time. Mobile/direct follow-up and independent review are pending.
+
+Tool identity evidence: frozen browser closure matches all 362 runtime files,
+digest bdc7a7cd36d764faf7fa02b1db9b951675a2d9b1e21aff62b68d48154dad8ac4;
+native binary and both plugin revisions match the accepted profile. Actual native
+worker context confirms gpt-6.1-sol/xhigh; root stays ultra/default, native cap2.
+Preparation receipt reports RTK activation 3.428s and initial indexing 1.978s;
+the coordinator's first post-record root rebuild took 1.013s and its actual
+exact-root source answer located scheduling/disposal and input/state seams.
