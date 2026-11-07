@@ -25,8 +25,14 @@ output { font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 700; 
 .arena-top { display: flex; justify-content: space-between; padding: 13px 20px; color: #bbc1d6; font-size: 9px; border-bottom: 1px solid #33394d; }
 .live-label { color: #a7decf; font-size: 8px; }
 canvas { width: 100%; display: block; aspect-ratio: 720 / 520; touch-action: none; cursor: crosshair; }
-canvas:focus-visible, a:focus-visible { outline: 3px solid #8466cf; outline-offset: 3px; }
-#status { min-height: 19px; font-size: 12px; text-align: center; color: #616777; margin: 12px 0; }
+canvas:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #8466cf; outline-offset: 3px; }
+.round-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+#status { min-height: 19px; font-size: 12px; color: #616777; margin: 0; }
+.game-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.game-actions button { min-width: 84px; min-height: 44px; padding: 8px 14px; border: 1px solid #c9bfdf; border-radius: 7px; background: #f0ebfb; color: #4f4079; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.game-actions #restart { background: #fffefa; }
+.game-actions button:hover:enabled { border-color: #8466cf; }
+.game-actions button:disabled { opacity: .55; cursor: default; }
 .controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 26px 0 25px; }
 .controls > div { display: flex; gap: 11px; align-items: flex-start; }
 .control-icon { border: 1px solid #d6d5d3; width: 29px; height: 29px; flex-shrink: 0; display: grid; place-items: center; border-radius: 7px; color: #6a5b98; font-size: 21px; }
@@ -54,6 +60,8 @@ footer span:last-child { font-family: inherit; letter-spacing: 0; }
   output { font-size: 22px; }
   .arena-top { padding: 10px 12px; font-size: 7px; }
   .live-label { font-size: 7px; }
+  .round-controls { flex-direction: column; gap: 10px; }
+  #status { text-align: center; }
   .controls { grid-template-columns: 1fr; gap: 17px; padding: 22px 2px; }
   .controls strong { margin-bottom: 3px; }
   footer { font-size: 7px; gap: 10px; letter-spacing: .04em; }
