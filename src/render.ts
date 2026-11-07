@@ -15,6 +15,8 @@ export function createView(canvas: HTMLCanvasElement, root: Document) {
   const remaining = root.querySelector<HTMLOutputElement>('#remaining')!;
   const status = root.querySelector<HTMLElement>('#status')!;
   const label = root.querySelector<HTMLElement>('.live-label')!;
+  const pause = root.querySelector<HTMLButtonElement>('#pause')!;
+  const restart = root.querySelector<HTMLButtonElement>('#restart')!;
 
   function rounded(x: number, y: number, width: number, height: number, radius: number, color: string) {
     ctx.fillStyle = color;
@@ -39,19 +41,26 @@ export function createView(canvas: HTMLCanvasElement, root: Document) {
     ctx.shadowBlur = 14; ctx.shadowColor = '#fcf7e775';
     ctx.fillStyle = '#fcf7e7'; ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2); ctx.fill();
     ctx.shadowBlur = 0;
-    const message = state.status === 'won' ? 'Wave clear! Refresh to play again.' : state.status === 'lost' ? 'Game over. Refresh to play again.' : 'Keep the ball in play. Clear the wave.';
+    const message = state.status === 'paused' ? 'Paused. Choose Resume to continue this round.'
+      : state.status === 'won' ? 'Wave clear! Choose Restart to play again.'
+      : state.status === 'lost' ? 'Game over. Refresh or choose Restart to play again.'
+      : 'Keep the ball in play. Clear the wave.';
     score.textContent = String(state.score).padStart(3, '0');
     lives.textContent = String(state.lives);
     remaining.textContent = String(state.bricks.filter(brick => brick.alive).length);
     if (status.textContent !== message) status.textContent = message;
-    label.textContent = state.status === 'playing' ? '● IN PLAY' : '● ROUND COMPLETE';
+    label.textContent = state.status === 'playing' ? '● IN PLAY' : state.status === 'paused' ? '● PAUSED' : '● ROUND COMPLETE';
+    pause.textContent = state.status === 'paused' ? 'Resume' : 'Pause';
+    const terminal = state.status === 'won' || state.status === 'lost';
+    if (terminal && root.activeElement === pause) restart.focus();
+    pause.disabled = terminal;
     if (state.status !== 'playing') {
       ctx.fillStyle = '#181e32dc'; ctx.fillRect(0, 0, WIDTH, HEIGHT);
       ctx.textAlign = 'center';
       ctx.fillStyle = '#fcf7e7'; ctx.font = '600 42px system-ui';
-      ctx.fillText(state.status === 'won' ? 'Wave clear.' : 'Another time, another wave.', WIDTH / 2, HEIGHT / 2 - 8);
+      ctx.fillText(state.status === 'paused' ? 'Paused.' : state.status === 'won' ? 'Wave clear.' : 'Another time, another wave.', WIDTH / 2, HEIGHT / 2 - 8);
       ctx.fillStyle = '#bfc4da'; ctx.font = '16px system-ui';
-      ctx.fillText('Refresh the page to play again.', WIDTH / 2, HEIGHT / 2 + 30);
+      ctx.fillText(state.status === 'paused' ? 'Choose Resume when you’re ready.' : 'Choose Restart to play again.', WIDTH / 2, HEIGHT / 2 + 30);
     }
   };
 }
