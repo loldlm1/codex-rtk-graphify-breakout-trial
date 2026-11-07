@@ -6,7 +6,7 @@ export interface Brick extends Rectangle { alive: boolean; row: number }
 export interface Controls { left: boolean; right: boolean; pointerX: number | null }
 export interface ControlSource { read(): Controls; clear(): void }
 export interface GameState {
-  status: 'playing' | 'won' | 'lost';
+  status: 'playing' | 'paused' | 'won' | 'lost';
   score: number;
   lives: number;
   paddle: Rectangle;
